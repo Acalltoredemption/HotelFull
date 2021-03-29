@@ -4,8 +4,10 @@ const router = express.Router();
 
 //controllers
 
-import {showMessage} from '../controllers/auth';
+import {register, login} from '../controllers/auth';
 
-router.get('/:message', showMessage);
+router.post('/register', register);
+router.post('/login', login);
+
 
 module.exports = router;
